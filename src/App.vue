@@ -1,20 +1,24 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import AuthToken from '@/components/AuthToken.vue'
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="125" height="125" />
+  <header class="flex flex-col">
+    <section class="flex">
+      <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="Welcome to our coding test!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/">Files</RouterLink>
+          <RouterLink to="/upload">Upload</RouterLink>
+        </nav>
+      </div>
+    </section>
+    <section>
+      <AuthToken/>
+    </section>
   </header>
 
   <RouterView />

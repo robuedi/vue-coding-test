@@ -1,9 +1,11 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+<script lang="ts" setup>
+import FileList from '@/components/FileList.vue'
+import PageHeader from '@/layout/PageHeader.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <PageHeader>Files</PageHeader>
+    <FileList />
   </main>
 </template>
